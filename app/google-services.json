@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1040442269015",
+    "project_id": "si-test-afcc5",
+    "storage_bucket": "si-test-afcc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040442269015:android:ae0e66bfe3bd4338393212",
+        "android_client_info": {
+          "package_name": "com.emarielle.sitest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040442269015-vrur3fi2lj2cqei50itcco30jot3o83f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZfJRIrUpn6aQHT3-NNIO9UjEDlDvDCbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040442269015-vrur3fi2lj2cqei50itcco30jot3o83f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040442269015:android:92d56c92d2d0e217393212",
+        "android_client_info": {
+          "package_name": "com.emarielle.sitestcliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040442269015-vrur3fi2lj2cqei50itcco30jot3o83f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZfJRIrUpn6aQHT3-NNIO9UjEDlDvDCbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040442269015-vrur3fi2lj2cqei50itcco30jot3o83f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

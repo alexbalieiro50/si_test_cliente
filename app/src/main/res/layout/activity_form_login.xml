@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".FormLogin">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="140dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:background="@drawable/edit_background"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/transparent"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_usuario"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/senha"
+        app:hintTextColor="@color/white"
+        app:passwordToggleDrawable="@drawable/ic_nao_ver_senha"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_Text"
+            android:background="@drawable/edit_background"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/transparent"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_senhas"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/txt_recupera_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperar a senha?"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="55dp"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_entrar"
+        style="@style/Button"
+        android:hint="@string/button"
+        android:textColorHint="@color/roxo"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt_cadastre_se"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastre-se"
+        android:textSize="8pt"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC"
+    tools:context=".TelaDeTeste">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"            >
+
+            <Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="TESTE"
+                android:layout_marginStart="150dp"
+                android:layout_marginEnd="150dp"
+                android:titleTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/balaoTopico"
+        style="@style/ContainerComponents"
+        android:layout_marginTop="28dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pergunta 1/10"
+        android:textSize="10pt"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/balaoTopico"
+        app:layout_constraintEnd_toEndOf="@+id/balaoTopico"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="@+id/balaoTopico"
+        app:layout_constraintTop_toTopOf="@+id/balaoTopico"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="teste2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/balaoTopico"
+        app:layout_constraintEnd_toEndOf="@+id/balaoTopico"
+        app:layout_constraintStart_toStartOf="@+id/balaoTopico"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balaoTopico">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEMPRE"
+            android:textSize="8pt"
+            android:textColor="#6746C5"
+            android:background="@drawable/bg_radio_button"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RARAMENTE"
+            android:textSize="8pt"
+            android:textColor="#6746C5"
+            android:background="@drawable/bg_radio_button"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AS VEZES"
+            android:textSize="8pt"
+            android:textColor="#6746C5"
+            android:background="@drawable/bg_radio_button"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NUNCA"
+            android:textSize="8pt"
+            android:textColor="#6746C5"
+            android:background="@drawable/bg_radio_button"
+            android:button="@null"
+            android:paddingLeft="12dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:layout_marginBottom="8dp"/>
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
+        style="@style/Button2"
+        android:layout_marginBottom="40dp"
+        android:hint="Responder"
+        android:textSize="10pt"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

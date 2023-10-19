@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SI Test Cliente</string>
+
+    <string name="email">  E-mail</string>
+    <string name="senha">  Senha</string>
+    <string name="confirma_senha">Confirmar Senha</string>
+    <string name="button">ENTRAR</string>
+    <string name="buttonpUBLICAR">PUBLICAR</string>
+    <string name="topico">+ NOVO TÓPICO</string>
+    <string name="nome">Nome</string>
+    <string name="cadastrar">CADASTRAR</string>
+    <string name="bem_vindo">
+        Aqui você poderá ter acesso a
+        diversos conteúdos voltados
+        para a área de Segurança da
+        Informação...mas antes responda
+        a um teste para verificar o
+        quanto você sabe sobre o assunto.
+    </string>
+    <string name="button_teste">TESTE SEU NÍVEL DE VULNERABILIDADE</string>
+
+    <string name="resultado_texto1">Você tem:</string>
+    <string name="resultado_texto2">de chances de\n sofrer ataques na \ninternet</string>
+    <string name="btn_resultado_teste">Saiba Mais</string>
+</resources>
