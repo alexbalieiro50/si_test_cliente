@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SITestCliente"
         tools:targetApi="31">
         <activity
+            android:name=".TelaPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".TelaListaConteudo"
             android:exported="false" />
         <activity
