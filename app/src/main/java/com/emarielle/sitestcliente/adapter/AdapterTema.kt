@@ -27,8 +27,10 @@ class AdapterTema(private val context: Context, private val temas: MutableList<L
         holder.bind(tema)
         holder.itemView.setOnClickListener {
             val itemClicado = temas[position]
-            val intent = Intent(context,TelaPrincipal::class.java)
-            intent.putExtra("tema",itemClicado)
+            val intent = Intent(context, TelaPrincipal::class.java)
+            intent.putExtra("topico", itemClicado.topico)
+            intent.putExtra("titulo", itemClicado.titulo)
+            intent.putExtra("conteudo", itemClicado.conteudo)
             context.startActivity(intent)
         }
     }

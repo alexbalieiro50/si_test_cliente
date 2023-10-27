@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="#DCDCDC"
     android:orientation="vertical"
-    tools:context=".TelaDeTeste">
+    tools:context=".TelaQuiz">
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -27,7 +28,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:title="TESTE"
+                android:title="QUIZ"
                 android:layout_marginStart="150dp"
                 android:layout_marginEnd="150dp"
                 android:titleTextColor="@color/white"
@@ -52,23 +53,23 @@
         android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/temaPergunta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pergunta 1/10"
-            android:textColor="@color/white"
-            android:textSize="10pt"/>
+    <TextView
+        android:id="@+id/txtTituloPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pergunta 1/10"
+        android:textColor="@color/white"
+        android:textSize="10pt"/>
 
-        <TextView
-            android:id="@+id/txtPergunta"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Texto......."
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:layout_marginTop="20dp" />
+    <TextView
+        android:id="@+id/txtPergunta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Texto......."
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp" />
     </LinearLayout>
 
 
@@ -82,10 +83,10 @@
         app:layout_constraintTop_toBottomOf="@+id/balaoTopico">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="a"
+            android:text="a) Senhas"
             android:textSize="8pt"
             android:textColor="#6746C5"
             android:background="@drawable/bg_radio_button"
@@ -99,7 +100,7 @@
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="b"
+            android:text="b) b) Cookies"
             android:textSize="8pt"
             android:textColor="#6746C5"
             android:background="@drawable/bg_radio_button"
@@ -113,7 +114,7 @@
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="c "
+            android:text="c) Firewalls "
             android:textSize="8pt"
             android:textColor="#6746C5"
             android:background="@drawable/bg_radio_button"
@@ -127,7 +128,7 @@
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="d"
+            android:text="d) Protocolos de rede Resposta"
             android:textSize="8pt"
             android:textColor="#6746C5"
             android:background="@drawable/bg_radio_button"

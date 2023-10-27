@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DCDCDC"
-    android:orientation="vertical"
-    tools:context=".TelaBemVindo">
+    tools:context=".TelaResultadoQuiz">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -19,38 +17,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="88dp"
-            android:layout_height="126dp"
-            android:src="@drawable/logo_i7"
-            android:layout_marginBottom="100dp"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Bem vindo ao App I7Safe!"
+            android:text="Parabéns!\nVocê acertou:"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="9pt" />
 
         <TextView
+            android:id="@+id/txtResultado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="@string/bem_vindo"
+            android:text="10/10"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="9pt" />
+            android:textSize="25pt" />
+
+
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnFazerTeste"
+        android:id="@+id/btnVoltarTelaIncial"
         style="@style/Button2"
-        android:hint="@string/button_teste"
+        android:hint="Tela Inicial"
         android:padding="5dp"
         android:textColorHint="@color/white"
-        android:textSize="8pt"
+        android:textSize="10pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

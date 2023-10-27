@@ -43,7 +43,7 @@ class TelaBemVindo : AppCompatActivity() {
 
 
     private fun irTelaTeste(){
-        val telaTeste = Intent(this, TelaConteudo::class.java)
+        val telaTeste = Intent(this, TelaDeTeste::class.java)
         startActivity(telaTeste)
     }
 }

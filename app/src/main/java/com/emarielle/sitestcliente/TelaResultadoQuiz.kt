@@ -4,15 +4,16 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
-import com.emarielle.sitestcliente.databinding.ActivityTelaResultadoTesteBinding
+import com.emarielle.sitestcliente.databinding.ActivityTelaResultadoQuizBinding
 
-class TelaResultadoTeste : AppCompatActivity() {
+class TelaResultadoQuiz : AppCompatActivity() {
 
-    private lateinit var binding:ActivityTelaResultadoTesteBinding
+    private lateinit var binding:ActivityTelaResultadoQuizBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityTelaResultadoTesteBinding.inflate(layoutInflater)
+        binding = ActivityTelaResultadoQuizBinding.inflate(layoutInflater)
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -20,28 +21,26 @@ class TelaResultadoTeste : AppCompatActivity() {
         supportActionBar?.hide()
         window.statusBarColor = Color.parseColor("#6746C5")
 
-        binding.btnSaibaMais.setOnClickListener {
 
-            irTela()
-
+        binding.btnVoltarTelaIncial.setOnClickListener {
+            voltarTela()
         }
 
 
+        // Recuperar a pontuação e o número total de perguntas dos extras do Intent
         val pontuacao = intent.getIntExtra("pontuacao", 0)
         val totalPerguntas = intent.getIntExtra("totalPerguntas", 0)
 
-        // Calcular a porcentagem
-        val porcentagem = (pontuacao.toDouble() / totalPerguntas.toInt()) * 100
-
-        // Exibir a pontuação e a porcentagem
-        val pontuacaoTextView = binding.txtResultadoTeste
-        pontuacaoTextView.text = "$pontuacao / 10"
-
-
+        // Exibir a pontuação
+        val pontuacaoTextView = binding.txtResultado
+        pontuacaoTextView.text = " $pontuacao / 10"
     }
 
-    private fun irTela() {
+    private fun voltarTela() {
         val voltarTela = Intent(this, TelaConteudo::class.java)
         startActivity(voltarTela)
     }
+
+
+
 }

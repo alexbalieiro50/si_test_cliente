@@ -8,6 +8,8 @@
     android:background="@color/cor_do_fundo"
     tools:context=".TelaPrincipal">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -30,7 +32,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back"
             android:layout_marginTop="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintBottom_toTopOf="@+id/textTopico"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.041"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +40,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textTopico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
@@ -53,20 +55,33 @@
             app:layout_constraintVertical_bias="0.347" />
 
         <TextView
+            android:id="@+id/txtSubtitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sub-Tótpico"
             android:textColor="@color/white"
             android:textSize="10pt"
             app:layout_constraintBottom_toBottomOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintEnd_toEndOf="@+id/textTopico"
+            app:layout_constraintStart_toStartOf="@+id/textTopico"
+            app:layout_constraintTop_toBottomOf="@+id/textTopico" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+
 
     <TextView
+        android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/roxo"
@@ -75,15 +90,38 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="28dp"/>
 
+
     <TextView
+        android:id="@+id/txtConteudo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Introduçãosssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+        android:text="Conteudo"
         android:textSize="10pt"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"/>
+        <TextView
+            android:id="@+id/txtTitulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/roxo"
+            android:text="@string/resultado_texto1"
+            android:textSize="10pt"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"/>
+
+
+        <TextView
+            android:id="@+id/txtConteudo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Conteudo"
+            android:textSize="10pt"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFazerQuiz"
@@ -93,6 +131,11 @@
         android:textColorHint="@color/white"
         android:textSize="10pt"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:layout_marginRight="40dp"
+        android:layout_margin="25dp"/>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
