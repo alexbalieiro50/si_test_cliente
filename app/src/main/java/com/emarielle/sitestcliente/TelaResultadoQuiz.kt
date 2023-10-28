@@ -33,7 +33,7 @@ class TelaResultadoQuiz : AppCompatActivity() {
 
         // Exibir a pontuação
         val pontuacaoTextView = binding.txtResultado
-        pontuacaoTextView.text = " $pontuacao / 10"
+        pontuacaoTextView.text = " $pontuacao / $totalPerguntas"
     }
 
     private fun voltarTela() {

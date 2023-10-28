@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.RadioButton
 import com.emarielle.sitestcliente.databinding.ActivityTelaPrincipalBinding
 import com.emarielle.sitestcliente.databinding.ActivityTelaQuizBinding
@@ -43,13 +44,30 @@ class TelaQuiz : AppCompatActivity() {
             binding.txtPergunta.text = question.questionText
 
             // Limpe as opções de resposta anteriores
-            binding.GroupRadio.removeAllViews()
+            binding.groupRadio.removeAllViews()
 
             for (option in question.options) {
                 val radioButton = RadioButton(this)
                 radioButton.text = option
-                binding.GroupRadio.addView(radioButton)
+                radioButton.textSize = 20f
+                radioButton.setTextColor(Color.parseColor("#6746C5"))
+                radioButton.setBackgroundResource(R.drawable.bg_radio_button)
+                radioButton.buttonDrawable = null
+                radioButton.setPadding(25, 25, 25, 25)
+
+                val layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+
+                // Define a margem inferior em pixels
+                layoutParams.bottomMargin = resources.getDimensionPixelSize(com.google.android.material.R.dimen.abc_action_bar_subtitle_bottom_margin_material)
+
+                radioButton.layoutParams = layoutParams
+                binding.groupRadio.addView(radioButton)
             }
+
+
 
             // Atualize o contador de perguntas
             val questionCounterText = "Pergunta ${currentQuestionIndex + 1}/$totalQuestions"
@@ -71,7 +89,7 @@ class TelaQuiz : AppCompatActivity() {
     }
 
     private fun checkAnswer(question: Questions) {
-        val selectedRadioButtonId = binding.GroupRadio.checkedRadioButtonId
+        val selectedRadioButtonId = binding.groupRadio.checkedRadioButtonId
 
         if (selectedRadioButtonId != -1) {
             val selectedRadioButton = findViewById<RadioButton>(selectedRadioButtonId)
@@ -89,6 +107,7 @@ class TelaQuiz : AppCompatActivity() {
         // Criar um Intent para abrir a atividade de resultados
         val intent = Intent(this, TelaResultadoQuiz::class.java)
         intent.putExtra("pontuacao", score)
+        intent.putExtra("totalPerguntas", totalQuestions)
         startActivity(intent)
         finish() // Finalize a ativade atual para que o usuário não possa voltar
     }

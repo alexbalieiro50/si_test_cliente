@@ -10,12 +10,11 @@
     <string name="nome">Nome</string>
     <string name="cadastrar">CADASTRAR</string>
     <string name="bem_vindo">
-        Aqui você poderá ter acesso a
-        diversos conteúdos voltados
-        para a área de Segurança da
-        Informação...mas antes responda
-        a um teste para verificar o
-        quanto você sabe sobre o assunto.
+        Aqui você poderá ter acesso \n
+        a diversos conteúdos voltados\n
+        para a área de Segurança da Informação...\n
+        mas antes responda a um teste para\n
+        verificar o quanto você sabe sobre o assunto.
     </string>
     <string name="button_teste">TESTE SEU NÍVEL DE VULNERABILIDADE</string>
 

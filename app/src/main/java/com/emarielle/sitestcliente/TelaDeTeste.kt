@@ -4,12 +4,15 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.RadioButton
+import androidx.core.view.marginBottom
 import com.emarielle.sitestcliente.databinding.ActivityTelaDeTesteBinding
 import com.emarielle.sitestcliente.databinding.ActivityTelaQuizBinding
 import com.emarielle.sitestcliente.perguntas.PerguntasTest
 import com.emarielle.sitestcliente.perguntas.Questions
     class TelaDeTeste : AppCompatActivity() {
+
 
         private lateinit var binding: ActivityTelaDeTesteBinding
 
@@ -42,12 +45,28 @@ import com.emarielle.sitestcliente.perguntas.Questions
                 binding.txtPergunta.text = question.perguntaText
 
                 // Limpe as opções de resposta anteriores
-                binding.GroupRadio.removeAllViews()
+                binding.groupRadio.removeAllViews()
 
                 for (option in question.opcao) {
                     val radioButton = RadioButton(this)
                     radioButton.text = option
-                    binding.GroupRadio.addView(radioButton)
+                    radioButton.textSize = 20f
+                    radioButton.setTextColor(Color.parseColor("#6746C5"))
+                    radioButton.setBackgroundResource(R.drawable.bg_radio_button)
+                    radioButton.buttonDrawable = null
+                    radioButton.setPadding(25, 25, 25, 25)
+
+                    val layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+
+                    // Define a margem inferior em pixels
+                    layoutParams.bottomMargin = resources.getDimensionPixelSize(com.google.android.material.R.dimen.abc_action_bar_subtitle_bottom_margin_material)
+
+                    radioButton.layoutParams = layoutParams
+
+                    binding.groupRadio.addView(radioButton)
                 }
 
                 // Atualize o contador de perguntas
@@ -70,7 +89,7 @@ import com.emarielle.sitestcliente.perguntas.Questions
         }
 
         private fun checkAnswer(question: PerguntasTest) {
-            val selectedRadioButtonId = binding.GroupRadio.checkedRadioButtonId
+            val selectedRadioButtonId = binding.groupRadio.checkedRadioButtonId
 
             if (selectedRadioButtonId != -1) {
                 val selectedRadioButton = findViewById<RadioButton>(selectedRadioButtonId)
@@ -82,13 +101,15 @@ import com.emarielle.sitestcliente.perguntas.Questions
             }
         }
 
+
+
         private fun showResults() {
             val resultText = "Pontuação: $score de $totalQuestions"
 
             // Criar um Intent para abrir a atividade de resultados
             val intent = Intent(this, TelaResultadoTeste::class.java)
             intent.putExtra("pontuacao", score)
-            intent.putExtra("toalPerguntas", totalQuestions)
+            intent.putExtra("totalPerguntas", totalQuestions)
             startActivity(intent)
             finish() // Finalize a atividade atual para que o usuário não possa voltar
         }

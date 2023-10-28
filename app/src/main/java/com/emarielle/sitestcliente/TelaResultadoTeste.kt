@@ -31,11 +31,11 @@ class TelaResultadoTeste : AppCompatActivity() {
         val totalPerguntas = intent.getIntExtra("totalPerguntas", 0)
 
         // Calcular a porcentagem
-        val porcentagem = (pontuacao.toDouble() / totalPerguntas.toInt()) * 100
+        val porcentagem = ((totalPerguntas.toInt() - pontuacao.toDouble())/totalPerguntas.toInt()) * 100
 
         // Exibir a pontuação e a porcentagem
         val pontuacaoTextView = binding.txtResultadoTeste
-        pontuacaoTextView.text = "$pontuacao / 10"
+        pontuacaoTextView.text = "${porcentagem.toInt()}%"
 
 
     }
